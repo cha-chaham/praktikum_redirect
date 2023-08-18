@@ -6,5 +6,22 @@
     <title>Youtube Redirect</title>
 </head>
 <body>
-</body>
+    <h1>Redirect Page</h1>
+    <p>Anda akan redirect ke halaman Youtube dalam 5 detik</p>
+
+    <script>
+        var countdown = 5;
+
+        function updateCountdown(){
+            countdown--;
+            if(countdown === 0 ) {
+                window.location.href = "https://www.youtube.com/"
+            }
+        }
+
+        window.onload = function() {
+            setInterval(updateCountdown, 1000);
+        }
+    </script>
+</body>;
 </html>
