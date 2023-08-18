@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube Redirect</title>
+    <style>
+        #countdown {
+            color : red;
+        }
+    </style>
 </head>
 <body>
     <h1>Redirect Page</h1>
-    <p>Anda akan redirect ke halaman Youtube dalam 5 detik</p>
+    <p>Anda akan redirect ke halaman Youtube dalam <span id="countdown"> </span></p>
 
     <script>
         var countdown = 5;
+        var countdownElement = document.getElementById("countdown");
 
         function updateCountdown(){
             countdown--;
+            if(countdown != 0) {
+                countdownElement.textContent = countdown + " Detik Lagi..."
+            }
             if(countdown === 0 ) {
                 window.location.href = "https://www.youtube.com/"
             }
