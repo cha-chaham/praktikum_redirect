@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Redirect Page</h1>
-    <p>Anda akan redirect ke halaman Youtube dalam <span id="countdown"> detik</span></p>
+    <p>Anda akan redirect ke halaman Youtube dalam <span id="countdown"> </span></p>
 
     <script>
         var countdown = 5;
@@ -21,7 +21,7 @@
         function updateCountdown(){
             countdown--;
             if(countdown != 0) {
-                countdownElement.textContent = countdown
+                countdownElement.textContent = countdown + " Detik Lagi..."
             }
             if(countdown === 0 ) {
                 window.location.href = "https://www.youtube.com/"
